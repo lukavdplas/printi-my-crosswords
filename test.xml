@@ -1,0 +1,59 @@
+<puzzle type="crossword">
+  <author>Luka</author>
+  <size>13x13</size>
+  <grid>
+    <row>s_anesthesist</row>
+    <row>e___d__a__m_r</row>
+    <row>i_l_excl_aare</row>
+    <row>zeem__ooi_gin</row>
+    <row>o_kea_u_g_oss</row>
+    <row>e__e__r_l____</row>
+    <row>n_bladgroen_m</row>
+    <row>____b_e__e__i</row>
+    <row>sater_t_mul_s</row>
+    <row>aso_itt__wouw</row>
+    <row>tong_reep_m_i</row>
+    <row>e_i__u__u___j</row>
+    <row>recapituleren</row>
+  </grid>
+  <clues direction="horizontal">
+    <clue>arts-specialist voor narcoses</clue>
+    <clue>exclusief</clue>
+    <clue>rivier in Zwitserland</clue>
+    <clue>lap</clue>
+    <clue>vrouwelijk schaap</clue>
+    <clue>soort jenever</clue>
+    <clue>papegaaiachtige vogel</clue>
+    <clue>stad in Noord-Brabant</clue>
+    <clue>loof</clue>
+    <clue>mythisch wezen</clue>
+    <clue>zeebarbeel</clue>
+    <clue>onaangepast persoon</clue>
+    <clue>in tegenstelling tot</clue>
+    <clue>vogel</clue>
+    <clue>spraakorgaan</clue>
+    <clue>strook</clue>
+    <clue>samenvatten</clue>
+  </clues>
+  <clues direction="vertical">
+    <clue>jaargetijde</clue>
+    <clue>wezen met bokkenpoten</clue>
+    <clue>onaangepast persoon</clue>
+    <clue>rivier in Midden-Nederland</clue>
+    <clue>bittere frisdrank</clue>
+    <clue>graanproduct</clue>
+    <clue>stad in Gelderland</clue>
+    <clue>wachthuisje</clue>
+    <clue>kledingstuk</clue>
+    <clue>groene groente</clue>
+    <clue>lichtkring</clue>
+    <clue>sneeuwhut</clue>
+    <clue>bierglas</clue>
+    <clue>periode</clue>
+    <clue>volwassen insect</clue>
+    <clue>zeevis</clue>
+    <clue>rij</clue>
+    <clue>paardenbit</clue>
+    <clue>wijn die in de mis wordt gebruikt</clue>
+  </clues>
+</puzzle>
