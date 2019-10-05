@@ -10,4 +10,4 @@ This module imports the xml crosswords as exported by my [crossword generator](h
 ### Future improvements
 The program works well right now. Some things I may want to add in the future:
 * wrap text for descriptions (most descriptions are so short it is not necessary, but just in case).
-* add a solution printer.
+* add a solution print function.
