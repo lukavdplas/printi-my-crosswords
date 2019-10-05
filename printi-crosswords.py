@@ -207,7 +207,7 @@ text_width, text_height = draw.multiline_textsize(ver, font = font)
 draw.multiline_text((0, y), ver, font = font)
 y += text_height
 
-clues_img.show()
+#clues_img.show()
 
 #%%
 
@@ -228,7 +228,7 @@ for x in range(clues_img.size[0]):
         value = clues_img.getpixel((x,y))
         output_img.putpixel((x, img_height + 20 + y), value)
 
-output_img.show()
+#output_img.show()
 #%%
 #-------------------------------------------------------------------------------
 #send image
