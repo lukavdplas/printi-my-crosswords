@@ -78,9 +78,6 @@ for i in range(width):
                 for y in range(y_min, y_max):
                     img.putpixel((x,y), 0)
 
-#img.show()
-
-
 #-------------------------------------------------------------------------------
 #adding clue numbers
 #-------------------------------------------------------------------------------
@@ -137,6 +134,8 @@ for i in range(width):
             draw.text((x_min + 1, y_min + 1), str(value), font = font)
 
 
+img.show()
+
 #%%
 #-------------------------------------------------------------------------------
 # generate clue image
@@ -148,18 +147,25 @@ hor_indices = []
 ver_indices = []
 
 
-for i in range(width):
-    for j in range(height):
+for i in range(height):
+    for j in range(width):
         index = numbers_grid[i][j]
         if index:
             if i < (height - 1) and empty_grid[i + 1][j]:
-                ver_indices.append(index)
+                if i == 0 or (not empty_grid[i - 1][j]):
+                    ver_indices.append(index)
             if j < (width - 1) and empty_grid[i][j + 1]:
-                hor_indices.append(index)
+                if j == 0 or (not empty_grid[i][j - 1]):
+                    hor_indices.append(index)
+
+img.show()
+print(hor_indices)
 
 #make a big string
 hor = '\n'.join([': '.join((str(i), text)) for i, text in zip(hor_indices, hor_clues)])
 ver = '\n'.join([': '.join((str(i), text)) for i, text in zip(ver_indices, ver_clues)])
+
+#print(hor)
 
 #generate image
 text_size = 20
@@ -215,15 +221,20 @@ output_img = PIL.Image.new('1', (paper_width, total_height), color=1)
 for x in range(img.size[0]):
     for y in range(img.size[1]):
         value = img.getpixel((x,y))
-        output_img.putpixel(value)
+        output_img.putpixel((x,y), value)
 
+for x in range(clues_img.size[0]):
+    for y in range(clues_img.size[1]):
+        value = clues_img.getpixel((x,y))
+        output_img.putpixel((x, img_height + 20 + y), value)
 
+output_img.show()
 #%%
 #-------------------------------------------------------------------------------
 #send image
 #-------------------------------------------------------------------------------
 
 f = io.BytesIO()
-img.save(f, format='PNG')
+output_img.save(f, format='PNG')
 f.seek(0,0)
 pp.send_binary_image_data('crossword.png', f, printer_name)
